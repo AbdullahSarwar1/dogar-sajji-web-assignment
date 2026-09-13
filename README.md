@@ -84,25 +84,6 @@ Development was done using feature branches merged into the main branch:
 * feature-contact-form: contact form validation and hours table
 * feature-responsive-compliance: responsive styling and layout cleanup
 
-## Viva Defense Guide
-
-Questions commonly asked in viva:
-
-1. Why use semantic HTML5 elements?
-Semantic elements like header, nav, main, section, article, aside, and footer provide meaning to the document structure. They improve accessibility for screen readers and help search engines understand the content hierarchy better than generic div tags.
-
-2. What is box-sizing: border-box?
-By default in CSS, padding and borders are added on top of an element width, which can cause layout overflow. Setting box-sizing to border-box includes padding and borders inside the declared width and height, preventing accidental horizontal scrollbars.
-
-3. When to use CSS Grid vs Flexbox?
-CSS Grid is used for two dimensional layouts where both rows and columns need structure (such as the menu grid and footer columns). Flexbox is used for one dimensional layouts along a single axis (such as the navbar, buttons, and form rows).
-
-4. How does the form validation work?
-Form submission is intercepted using event.preventDefault(). Field values are checked using length checks and regular expressions. If validation fails, error messages appear under the inputs. If all fields pass, a confirmation message is displayed and the form resets.
-
-5. How does the slider and modal work without external libraries?
-The slider tracks the active slide index in a variable and applies a CSS translateX transform to the track element. The modal listens for click events on gallery cards, reads the image source and caption, displays the modal overlay, and closes when clicking the close button or pressing Escape.
-
 ## How to Run Locally
 
 1. Open the project folder in any modern browser by double clicking index.html
