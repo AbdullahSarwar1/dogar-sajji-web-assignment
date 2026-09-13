@@ -1,338 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact Dogar Sajji for table reservations, catering inquiries, dining hours, location directions, and feedback in Karachi." />
-    <meta name="author" content="Abdullah Sarwar" />
-    <title>Dogar Sajji | Contact Us &amp; Table Reservations</title>
-    
-    <!-- External Stylesheet -->
+    <title>Contact Us - Dogar Sajji</title>
     <link rel="stylesheet" href="css/style.css" />
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Site Header & Sticky Navigation -->
-    <header class="site-header">
-      <a href="index.html" class="logo" aria-label="Dogar Sajji Home">Dogar <span>Sajji</span></a>
-      <nav class="main-nav" aria-label="Primary Navigation">
+    <header>
+      <nav>
+        <a href="index.html" class="logo">Dogar <span>Sajji</span></a>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
-          <li class="nav-cta"><a href="contact.html" class="btn btn-sm">Book Table</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
+        <button class="hamburger" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </header>
 
-    <main id="main-content">
-      <!-- Page Hero -->
-      <section class="hero contact-hero" aria-label="Contact Hero Banner">
+    <main>
+      <section class="hero contact-hero">
         <div class="hero-content">
-          <span class="hero-badge">Reservations &amp; Inquiries</span>
-          <h1>Get In Touch With Us</h1>
-          <p>Book a family dining table, inquire about event catering, or ask about our traditional charcoal roasting.</p>
+          <h1>Contact Us</h1>
+          <p>We would love to hear from you. Reserve a table, order ahead, or send an inquiry.</p>
         </div>
       </section>
 
-      <!-- Contact Section (2-Column Grid: Form + Info/Map) -->
-      <section class="contact-section" aria-label="Contact Form and Location Information">
-        <div class="container">
-          <div class="contact-layout">
-            
-            <!-- Left Column: Interactive Contact & Reservation Form (Assignment Requirement: JS Validation) -->
-            <div class="contact-form-card">
-              <span class="section-tag">Direct Booking</span>
-              <h2>Send Us a Message</h2>
-              <p class="form-subtitle">Fill out the form below. We confirm dining reservations within 30 minutes via phone or SMS.</p>
+      <section class="contact-section">
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <p style="margin-bottom: 24px; color: var(--muted-text);">
+            Fill out the form below and we will get back to you promptly.
+          </p>
 
-              <form id="contactForm" novalidate aria-label="Reservation and Contact Form">
-                <div class="form-grid-2">
-                  <!-- Full Name Field -->
-                  <div class="form-group">
-                    <label for="name">
-                      Full Name <span class="required-star" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="e.g. Abdullah Sarwar"
-                      autocomplete="name"
-                      required
-                      aria-required="true"
-                    />
-                    <span class="error-message" id="nameError" role="alert"></span>
-                  </div>
-
-                  <!-- Email Address Field -->
-                  <div class="form-group">
-                    <label for="email">
-                      Email Address <span class="required-star" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="e.g. name@example.com"
-                      autocomplete="email"
-                      required
-                      aria-required="true"
-                    />
-                    <span class="error-message" id="emailError" role="alert"></span>
-                  </div>
-                </div>
-
-                <div class="form-grid-2">
-                  <!-- Phone Number Field (Pakistani Mobile Validation) -->
-                  <div class="form-group">
-                    <label for="phone">
-                      Phone Number <span class="required-star" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="e.g. 0300-1234567"
-                      autocomplete="tel"
-                      required
-                      aria-required="true"
-                    />
-                    <span class="error-message" id="phoneError" role="alert"></span>
-                  </div>
-
-                  <!-- Inquiry / Reservation Purpose -->
-                  <div class="form-group">
-                    <label for="subject">
-                      Inquiry Type <span class="required-star" aria-hidden="true">*</span>
-                    </label>
-                    <select id="subject" name="subject" required aria-required="true">
-                      <option value="">-- Please Select --</option>
-                      <option value="reservation">Table Reservation (Dine-In)</option>
-                      <option value="catering">Wedding / Party Catering</option>
-                      <option value="advance-order">Pre-Order Mutton Sajji</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="feedback">Customer Feedback</option>
-                    </select>
-                    <span class="error-message" id="subjectError" role="alert"></span>
-                  </div>
-                </div>
-
-                <!-- Conditional Guest Count Field (Toggled via JS when reservation chosen) -->
-                <div class="form-group" id="reservationGuestsGroup" style="display: none;">
-                  <label for="guestCountSelect">Number of Guests</label>
-                  <select id="guestCountSelect" name="guests">
-                    <option value="1-2">1 &ndash; 2 Persons (Intimate Table)</option>
-                    <option value="3-5" selected>3 &ndash; 5 Persons (Family Table)</option>
-                    <option value="6-10">6 &ndash; 10 Persons (Large Family Chamber)</option>
-                    <option value="11-20">11 &ndash; 20 Persons (Private Dawat Hall)</option>
-                    <option value="20+">20+ Persons (Event Catering)</option>
-                  </select>
-                </div>
-
-                <!-- Message Field -->
-                <div class="form-group">
-                  <label for="message">
-                    Your Message / Special Requests <span class="required-star" aria-hidden="true">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    placeholder="Provide details such as dining date, seating preference (outdoor charpai vs AC hall), or dietary requirements..."
-                    required
-                    aria-required="true"
-                  ></textarea>
-                  <span class="error-message" id="messageError" role="alert"></span>
-                </div>
-
-                <!-- Terms / SMS Alert Checkbox -->
-                <div class="form-checkbox-group">
-                  <input type="checkbox" id="smsAlerts" name="smsAlerts" checked />
-                  <label for="smsAlerts">Receive instant SMS confirmation with booking reference and directions.</label>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="btn" style="width: 100%;">
-                  Send Message &amp; Confirm Booking
-                </button>
-
-                <!-- Dynamic Success / Error Alert Box (Updated via JS) -->
-                <div id="formStatusBox" class="form-status-box" role="status" aria-live="polite"></div>
-              </form>
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. Muhammad Ali"
+                required
+              />
+              <span class="error" id="nameError"></span>
             </div>
 
-            <!-- Right Column: Contact Details, Semantic Table, Map & Parking Note -->
-            <div class="contact-info-card">
-              
-              <!-- Direct Details Block -->
-              <div class="info-block">
-                <h3><span>&#128205;</span> Restaurant Headquarters</h3>
-                <ul class="info-list">
-                  <li>
-                    <span class="info-icon">&#127969;</span>
-                    <div>
-                      <strong>Address:</strong><br />
-                      Main Commercial Boulevard, Near Boat Basin, Clifton &ndash; Karachi, Pakistan
-                    </div>
-                  </li>
-                  <li>
-                    <span class="info-icon">&#128222;</span>
-                    <div>
-                      <strong>Phone Hotlines:</strong><br />
-                      <a href="tel:03001234567">0300-1234567</a> &bull; <a href="tel:02135678900">021-35678900</a>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="info-icon">&#9993;</span>
-                    <div>
-                      <strong>Email Inquiries:</strong><br />
-                      <a href="mailto:info@dogarsajji.com">info@dogarsajji.com</a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Semantic HTML5 Table: Operating Hours (Assignment Requirement: Tables) -->
-              <div class="info-block" style="padding: 0; overflow: hidden;">
-                <div class="table-responsive-wrapper" style="margin: 0; border: none; box-shadow: none; border-radius: 0;">
-                  <table class="custom-table" style="margin: 0; box-shadow: none;">
-                  <caption>Weekly Dining &amp; Delivery Schedule</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Day of Week</th>
-                      <th scope="col">Dine-In Hours</th>
-                      <th scope="col">Takeaway / Delivery</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Monday &ndash; Thursday</th>
-                      <td>12:00 PM &ndash; 11:30 PM</td>
-                      <td>12:00 PM &ndash; 12:00 AM</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Friday</th>
-                      <td>02:00 PM &ndash; 01:00 AM</td>
-                      <td>02:00 PM &ndash; 01:30 AM</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Saturday &ndash; Sunday</th>
-                      <td>12:00 PM &ndash; 01:00 AM</td>
-                      <td>12:00 PM &ndash; 01:30 AM</td>
-                    </tr>
-                  </tbody>
-                </table>
-                </div>
-              </div>
-
-              <!-- Embedded Google Map -->
-              <div class="map-wrapper" aria-label="Google Map Location of Dogar Sajji">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115860.55299447387!2d66.97491419999999!3d24.841846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33dd5a20d4371%3A0xb35a0d33e08f2e2a!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-                  title="Google Maps Location of Dogar Sajji"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-
-              <!-- Semantic Aside: Parking, Directions & Accessibility -->
-              <aside class="location-notes" aria-label="Visitor Logistics and Parking Information">
-                <strong>Visitor Parking &amp; Accessibility:</strong>
-                Complimentary valet parking is available at our main entrance. Our facility features wheelchair access ramps and a dedicated elevator for upper-floor private family chambers.
-              </aside>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g. ali@example.com"
+                required
+              />
+              <span class="error" id="emailError"></span>
             </div>
 
-          </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. 0300-1234567"
+                required
+              />
+              <span class="error" id="phoneError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Let us know how many guests, date, or your inquiry..."
+                required
+              ></textarea>
+              <span class="error" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">
+              Send Message
+            </button>
+
+            <div id="formSuccess" class="success-msg" role="status"></div>
+          </form>
         </div>
+
+        <aside class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>
+            <strong>Address:</strong> Main Boulevard, Clifton, Karachi, Pakistan
+          </p>
+          <p>
+            <strong>Phone:</strong> <a href="tel:03001234567">0300-1234567</a>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:info@dogarsajji.com">info@dogarsajji.com</a>
+          </p>
+
+          <table class="hours-table">
+            <caption>
+              Opening Hours
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Dine-In</th>
+                <th scope="col">Takeaway</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mon - Thu</td>
+                <td>12:00 PM - 11:30 PM</td>
+                <td>12:00 PM - 12:00 AM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>2:00 PM - 1:00 AM</td>
+                <td>2:00 PM - 1:30 AM</td>
+              </tr>
+              <tr>
+                <td>Sat - Sun</td>
+                <td>12:00 PM - 1:00 AM</td>
+                <td>12:00 PM - 1:30 AM</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115860.55299447387!2d66.97491419999999!3d24.841846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33dd5a20d4371%3A0xb35a0d33e08f2e2a!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+            title="Dogar Sajji Location"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </aside>
       </section>
     </main>
 
-    <!-- Standard Site Footer -->
-    <footer class="site-footer">
+    <footer>
       <div class="footer-container">
-        <!-- Brand Column -->
         <div class="footer-col footer-brand">
           <a href="index.html" class="logo">Dogar <span>Sajji</span></a>
           <p>
-            Traditional Balochi culinary excellence slow-roasted over real charcoal wood embers. Preserving timeless family recipes since 1998.
+            Authentic Balochi Sajji, slow grilled over charcoal the way our
+            family has always made it.
           </p>
-          <div class="socials" aria-label="Social Media Links">
-            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit Facebook">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit Instagram">Instagram</a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="Visit TikTok">TikTok</a>
+          <div class="socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
-            <li><a href="contact.html">Contact & Booking</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
         <div class="footer-col">
-          <h4>Get In Touch</h4>
+          <h4>Contact</h4>
           <ul>
-            <li class="footer-contact-item">
-              <span class="footer-contact-icon">&#128205;</span>
-              <span>Main Boulevard, Gulberg / Clifton, Karachi, Pakistan</span>
-            </li>
-            <li class="footer-contact-item">
-              <span class="footer-contact-icon">&#128222;</span>
-              <a href="tel:03001234567">0300-1234567</a>
-            </li>
-            <li class="footer-contact-item">
-              <span class="footer-contact-icon">&#9993;</span>
-              <a href="mailto:info@dogarsajji.com">info@dogarsajji.com</a>
-            </li>
+            <li>Main Boulevard, Karachi, Pakistan</li>
+            <li><a href="tel:03001234567">0300-1234567</a></li>
+            <li><a href="mailto:info@dogarsajji.com">info@dogarsajji.com</a></li>
           </ul>
         </div>
 
-        <!-- Timings -->
         <div class="footer-col">
           <h4>Opening Hours</h4>
           <ul>
-            <li><strong>Mon - Thu:</strong> 12:00 PM &ndash; 11:30 PM</li>
-            <li><strong>Fri - Sun:</strong> 12:00 PM &ndash; 01:00 AM</li>
-            <li><em>Takeaway & Dine-In Available Daily</em></li>
+            <li>Mon - Fri: 12:00 PM - 11:00 PM</li>
+            <li>Sat - Sun: 12:00 PM - 1:00 AM</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <p>&copy; 2026 Dogar Sajji. All Rights Reserved.</p>
-          <p class="student-credit">Assignment 01 &bull; Web Technologies &bull; BS CS F24 (Dr. Noman Shafi)</p>
-        </div>
+        <p>&copy; 2026 Dogar Sajji. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <!-- Back to Top Floating Button -->
-    <button class="back-to-top" aria-label="Scroll back to top of page">&#8593;</button>
-
-    <!-- Core Interactive JavaScript -->
     <script src="js/script.js"></script>
   </body>
 </html>

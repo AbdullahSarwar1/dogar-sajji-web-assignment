@@ -3,280 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Dogar Sajji Gallery - View photos of our charcoal roasting pits, kitchen artistry, family dining halls, and plated delicacies." />
-    <meta name="author" content="Abdullah Sarwar" />
-    <title>Dogar Sajji | Photo Gallery & Kitchen Glimpse</title>
-    
-    <!-- External Stylesheet -->
+    <title>Dogar Sajji | Gallery</title>
     <link rel="stylesheet" href="css/style.css" />
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Site Header & Sticky Navigation -->
-    <header class="site-header">
-      <a href="index.html" class="logo" aria-label="Dogar Sajji Home">Dogar <span>Sajji</span></a>
-      <nav class="main-nav" aria-label="Primary Navigation">
+    <header>
+      <a href="index.html" class="logo">Dogar <span>Sajji</span></a>
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="nav-cta"><a href="contact.html" class="btn btn-sm">Book Table</a></li>
         </ul>
       </nav>
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </header>
+    <div class="nav-backdrop"></div>
 
-    <main id="main-content">
-      <!-- Page Hero -->
-      <section class="hero gallery-hero" aria-label="Gallery Hero Banner">
-        <div class="hero-content">
-          <span class="hero-badge">A Visual Feast</span>
-          <h1>Moments of Culinary Artistry</h1>
-          <p>Explore our charcoal hearths, master craftsmanship, family dining chambers, and freshly served creations.</p>
-        </div>
+    <main>
+      <section class="gallery-hero">
+        <h1>Gallery</h1>
+        <p>A glimpse into our kitchen, our food, and our people</p>
       </section>
 
-      <!-- Showcase Section (Contains Slider & Grid) -->
-      <section class="gallery-showcase" aria-label="Visual Showcase">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-tag">Featured Carousel</span>
-            <h2>Highlights of the Hearth</h2>
-            <p>Use the navigation arrows, indicator dots, or arrow keys to browse featured kitchen scenes.</p>
-          </div>
-
-          <!-- JavaScript Interactive Carousel / Slider (Assignment Requirement: Image Slider) -->
-          <div class="slider-container" tabindex="0" aria-label="Featured Gallery Carousel">
-            <div class="slider-track">
-              <!-- Slide 1 -->
-              <div class="slide">
-                <img src="images/gallery1.jpg" alt="Whole chickens roasting vertically on skewers around glowing embers" />
-                <div class="slide-caption">
-                  <h3>Open-Fire Charcoal Roasting</h3>
-                  <p>Whole birds arranged in a traditional circle around Babool wood embers for uniform radiant heating.</p>
-                </div>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="slide">
-                <img src="images/gallery2.jpg" alt="Comfortable family dining area with warm lighting" />
-                <div class="slide-caption">
-                  <h3>Family Dining Hall</h3>
-                  <p>Spacious, air-conditioned seating designed for intimate family meals and celebratory feasts.</p>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="slide">
-                <img src="images/gallery3.jpg" alt="Artisanal mountain spices, rock salt, and whole cumin seeds" />
-                <div class="slide-caption">
-                  <h3>Hand-Pounded Mountain Spices</h3>
-                  <p>Freshly crushed rock salt and secret Balochi botanicals that give our Sajji its legendary nuance.</p>
-                </div>
-              </div>
-
-              <!-- Slide 4 -->
-              <div class="slide">
-                <img src="images/gallery4.jpg" alt="Senior pitmaster inspecting the crispness of Sajji skin" />
-                <div class="slide-caption">
-                  <h3>The Master's Precision</h3>
-                  <p>Every single skewer is monitored by our senior ustaads who know the exact moment the meat is done.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carousel Navigation Controls -->
-            <button class="slider-btn prev" aria-label="Previous Slide">&#10094;</button>
-            <button class="slider-btn next" aria-label="Next Slide">&#10095;</button>
-
-            <!-- Slide Counter Badge -->
-            <div class="slider-counter" aria-live="polite">1 / 4</div>
-
-            <!-- Clickable Indicator Dots -->
-            <div class="slider-dots" aria-label="Slide Indicator Dots"></div>
-          </div>
-
-          <!-- Gallery Photo Grid Section -->
-          <div class="section-header" style="margin-top: 70px;">
-            <span class="section-tag">Photo Archive</span>
-            <h2>Click Any Photo to Enlarge</h2>
-            <p>Experience high-resolution snapshots of our kitchen and dining ambiance in an interactive lightbox popup.</p>
-          </div>
-
-          <!-- Interactive Lightbox Grid (Assignment Requirement: Modal Pop-up) -->
-          <div class="gallery-grid" aria-label="Gallery Grid">
-            <!-- Card 1 -->
-            <figure class="gallery-card" tabindex="0" role="button" aria-label="Enlarge: The Charcoal Hearth">
-              <img src="images/gallery1.jpg" alt="Whole chickens roasting vertically on skewers" loading="lazy" />
-              <figcaption class="gallery-overlay">
-                <span class="gallery-zoom-icon" aria-hidden="true">&#128269;</span>
-                <h4>The Charcoal Hearth</h4>
-                <p>Gentle wood fire smoking the meat to golden perfection.</p>
-              </figcaption>
-            </figure>
-
-            <!-- Card 2 -->
-            <figure class="gallery-card" tabindex="0" role="button" aria-label="Enlarge: Family Dining Chamber">
-              <img src="images/gallery2.jpg" alt="Spacious dining hall with families dining" loading="lazy" />
-              <figcaption class="gallery-overlay">
-                <span class="gallery-zoom-icon" aria-hidden="true">&#128269;</span>
-                <h4>Family Dining Chamber</h4>
-                <p>Warm ambient lighting and hospitable seating.</p>
-              </figcaption>
-            </figure>
-
-            <!-- Card 3 -->
-            <figure class="gallery-card" tabindex="0" role="button" aria-label="Enlarge: Organic Mountain Herbs">
-              <img src="images/gallery3.jpg" alt="Spices and raw ingredients" loading="lazy" />
-              <figcaption class="gallery-overlay">
-                <span class="gallery-zoom-icon" aria-hidden="true">&#128269;</span>
-                <h4>Organic Mountain Herbs</h4>
-                <p>Pure rock salt, dried citrus, and whole cumin.</p>
-              </figcaption>
-            </figure>
-
-            <!-- Card 4 -->
-            <figure class="gallery-card" tabindex="0" role="button" aria-label="Enlarge: Master Pit artisans">
-              <img src="images/gallery4.jpg" alt="Master chef tending to skewers" loading="lazy" />
-              <figcaption class="gallery-overlay">
-                <span class="gallery-zoom-icon" aria-hidden="true">&#128269;</span>
-                <h4>Master Pit Artisans</h4>
-                <p>Decades of experience in balanced skewer roasting.</p>
-              </figcaption>
-            </figure>
-
-            <!-- Card 5 -->
-            <figure class="gallery-card" tabindex="0" role="button" aria-label="Enlarge: Courtyard Ambience">
-              <img src="images/gallery5.jpg" alt="Outdoor courtyard dining atmosphere under fairy lights" loading="lazy" />
-              <figcaption class="gallery-overlay">
-                <span class="gallery-zoom-icon" aria-hidden="true">&#128269;</span>
-                <h4>Courtyard Dining</h4>
-                <p>Authentic open-air traditional charpai seating.</p>
-              </figcaption>
-            </figure>
-
-            <!-- Card 6 -->
-            <figure class="gallery-card" tabindex="0" role="button" aria-label="Enlarge: Plated Signature Sajji">
-              <img src="images/gallery6.jpg" alt="Plated full sajji over fragrant saffron rice" loading="lazy" />
-              <figcaption class="gallery-overlay">
-                <span class="gallery-zoom-icon" aria-hidden="true">&#128269;</span>
-                <h4>Plated Signature Sajji</h4>
-                <p>Garnished with toasted almonds, raisins, and raita.</p>
-              </figcaption>
-            </figure>
-          </div>
-
-          <!-- Semantic Aside: Photography Policy Note -->
-          <aside class="heritage-quote" style="max-width: 900px; margin: 50px auto 0; text-align: center;" aria-label="Photography Notice">
-            <strong>Capture Your Moments:</strong> We love welcoming food bloggers, content creators, and family memories! Tag us on Instagram <a href="https://instagram.com" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: underline;">@DogarSajjiOfficial</a> for a feature on our wall of fame.
-          </aside>
+      <!-- Image Slider / Carousel (Requirement 4) -->
+      <section class="slider">
+        <div class="slider-track">
+          <img src="images/gallery1.jpg" alt="Sajji on the grill" />
+          <img src="images/gallery2.jpg" alt="Family dining area" />
+          <img src="images/gallery3.jpg" alt="Fresh spices and herbs" />
+          <img src="images/gallery4.jpg" alt="Chef preparing Sajji" />
         </div>
+        <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
+        <div class="slider-counter">1 / 4</div>
+      </section>
+
+      <!-- Gallery Grid with Click to Enlarge (Requirement 4: Modal Pop-up) -->
+      <section class="gallery-grid">
+        <figure class="gallery-item" tabindex="0">
+          <img src="images/gallery1.jpg" alt="Sajji on the grill" />
+          <figcaption>Sajji on the charcoal grill</figcaption>
+        </figure>
+        <figure class="gallery-item" tabindex="0">
+          <img src="images/gallery2.jpg" alt="Family dining area" />
+          <figcaption>Family dining area</figcaption>
+        </figure>
+        <figure class="gallery-item" tabindex="0">
+          <img src="images/gallery3.jpg" alt="Fresh spices and herbs" />
+          <figcaption>Traditional Balochi spices and herbs</figcaption>
+        </figure>
+        <figure class="gallery-item" tabindex="0">
+          <img src="images/gallery4.jpg" alt="Chef preparing Sajji" />
+          <figcaption>Master chef preparing skewers</figcaption>
+        </figure>
+        <figure class="gallery-item" tabindex="0">
+          <img src="images/gallery5.jpg" alt="Restaurant ambience" />
+          <figcaption>Evening restaurant ambience</figcaption>
+        </figure>
+        <figure class="gallery-item" tabindex="0">
+          <img src="images/gallery6.jpg" alt="Plated dish close up" />
+          <figcaption>Signature Sajji served with basmati rice</figcaption>
+        </figure>
       </section>
     </main>
 
-    <!-- Interactive Lightbox Modal (Assignment Requirement: Modal Pop-up & DOM Manipulation) -->
-    <div class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image Viewer Lightbox">
-      <button class="lightbox-close" aria-label="Close Lightbox Dialog">&times;</button>
-      <button class="lightbox-nav prev" aria-label="Previous Image">&#10094;</button>
-      <button class="lightbox-nav next" aria-label="Next Image">&#10095;</button>
-      
-      <div class="lightbox-content">
-        <div class="lightbox-img-wrapper">
-          <img class="lightbox-img" src="images/gallery1.jpg" alt="Enlarged gallery view" />
-        </div>
-        <div class="lightbox-details">
-          <div class="lightbox-caption">
-            <h3 class="lightbox-title">Image Title</h3>
-            <p class="lightbox-desc">Detailed scene description.</p>
-          </div>
-          <span style="font-size: 0.8rem; color: #ffde8a; font-weight: 600;">Use &larr; &rarr; or Esc to navigate</span>
-        </div>
+    <!-- Modal Pop-up (Requirement 4: Dynamic Content / Modal Pop-up) -->
+    <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-box">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <img id="modalImg" src="images/gallery1.jpg" alt="Enlarged photo" />
+        <p id="modalCaption"></p>
       </div>
     </div>
 
-    <!-- Standard Site Footer -->
-    <footer class="site-footer">
+    <footer>
       <div class="footer-container">
-        <!-- Brand Column -->
         <div class="footer-col footer-brand">
           <a href="index.html" class="logo">Dogar <span>Sajji</span></a>
           <p>
-            Traditional Balochi culinary excellence slow-roasted over real charcoal wood embers. Preserving timeless family recipes since 1998.
+            Authentic Balochi Sajji, slow grilled over charcoal the way our
+            family has always made it.
           </p>
-          <div class="socials" aria-label="Social Media Links">
-            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit Facebook">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit Instagram">Instagram</a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="Visit TikTok">TikTok</a>
+          <div class="socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
-            <li><a href="contact.html">Contact & Booking</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
         <div class="footer-col">
-          <h4>Get In Touch</h4>
+          <h4>Contact</h4>
           <ul>
-            <li class="footer-contact-item">
-              <span class="footer-contact-icon">&#128205;</span>
-              <span>Main Boulevard, Gulberg / Clifton, Karachi, Pakistan</span>
-            </li>
-            <li class="footer-contact-item">
-              <span class="footer-contact-icon">&#128222;</span>
-              <a href="tel:03001234567">0300-1234567</a>
-            </li>
-            <li class="footer-contact-item">
-              <span class="footer-contact-icon">&#9993;</span>
-              <a href="mailto:info@dogarsajji.com">info@dogarsajji.com</a>
-            </li>
+            <li>Main Boulevard, Karachi, Pakistan</li>
+            <li><a href="tel:03001234567">0300-1234567</a></li>
+            <li><a href="mailto:info@dogarsajji.com">info@dogarsajji.com</a></li>
           </ul>
         </div>
 
-        <!-- Timings -->
         <div class="footer-col">
           <h4>Opening Hours</h4>
           <ul>
-            <li><strong>Mon - Thu:</strong> 12:00 PM &ndash; 11:30 PM</li>
-            <li><strong>Fri - Sun:</strong> 12:00 PM &ndash; 01:00 AM</li>
-            <li><em>Takeaway & Dine-In Available Daily</em></li>
+            <li>Mon - Fri: 12:00 PM - 11:00 PM</li>
+            <li>Sat - Sun: 12:00 PM - 1:00 AM</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <p>&copy; 2026 Dogar Sajji. All Rights Reserved.</p>
-          <p class="student-credit">Assignment 01 &bull; Web Technologies &bull; BS CS F24 (Dr. Noman Shafi)</p>
-        </div>
+        <p>&copy; 2026 Dogar Sajji. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <!-- Back to Top Floating Button -->
-    <button class="back-to-top" aria-label="Scroll back to top of page">&#8593;</button>
-
-    <!-- Core Interactive JavaScript -->
     <script src="js/script.js"></script>
   </body>
 </html>
