@@ -1,10 +1,4 @@
-/* ==========================================================================
-   Dogar Sajji - Official Stylesheet
-   Web Technologies (Assignment 01)
-   HTML5, CSS3, Vanilla JavaScript
-   ========================================================================== */
-
-/* ---------- 1. Reset & Box Model ---------- */
+/* Reset and variables */
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +62,7 @@ button, input, textarea, select {
   outline-offset: 2px;
 }
 
-/* ---------- 2. Header and Navigation ---------- */
+/* Header and navigation */
 header {
   display: flex;
   justify-content: space-between;
@@ -121,7 +115,6 @@ nav ul li a.active::after {
   background-color: var(--primary-color);
 }
 
-/* Hamburger Button */
 .hamburger {
   display: none;
   background: none;
@@ -153,7 +146,6 @@ nav ul li a.active::after {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile backdrop */
 .nav-backdrop {
   display: none;
   position: fixed;
@@ -166,7 +158,7 @@ nav ul li a.active::after {
   display: block;
 }
 
-/* ---------- 3. Buttons ---------- */
+/* Buttons */
 .btn {
   display: inline-block;
   background-color: var(--primary-color);
@@ -188,7 +180,7 @@ nav ul li a.active::after {
   box-shadow: 0 4px 12px rgba(222, 162, 50, 0.3);
 }
 
-/* ---------- 4. Section Headings ---------- */
+/* Section headings */
 .featured-menu h2,
 .testimonials h2 {
   font-family: var(--font-heading);
@@ -198,12 +190,8 @@ nav ul li a.active::after {
   text-align: center;
 }
 
-/* ---------- 5. Hero Sections (All Pages) ---------- */
-.hero,
-.about-hero,
-.menu-hero,
-.gallery-hero,
-.contact-hero {
+/* Hero */
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,56 +202,45 @@ nav ul li a.active::after {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 45vh;
 }
 
-.hero {
+.hero-home {
   min-height: 70vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/hero-sajji.jpeg");
 }
 
 .about-hero {
-  min-height: 45vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/about-hero-bg.jpeg");
 }
 
 .menu-hero {
-  min-height: 45vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/menu-hero.jpg");
 }
 
 .gallery-hero {
-  min-height: 45vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/gallery-hero.jpg");
 }
 
 .contact-hero {
-  min-height: 45vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/contact-hero.jpg");
 }
 
-.hero h1,
-.about-hero h1,
-.menu-hero h1,
-.gallery-hero h1,
-.contact-hero h1 {
+.hero h1 {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 3.2rem);
   margin-bottom: 15px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.hero p,
-.about-hero p,
-.menu-hero p,
-.gallery-hero p,
-.contact-hero p {
+.hero p {
   font-size: clamp(1rem, 2.2vw, 1.2rem);
   max-width: 650px;
   margin-bottom: 25px;
   color: #f5ede6;
 }
 
-/* ---------- 6. Highlights (Home Page) ---------- */
+/* Highlights */
 .highlights {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -300,7 +277,7 @@ nav ul li a.active::after {
   color: var(--muted);
 }
 
-/* ---------- 7. Menu Grid (Home & Menu Pages) ---------- */
+/* Menu */
 .featured-menu {
   padding: 50px var(--side-pad) 80px;
   text-align: center;
@@ -374,7 +351,7 @@ nav ul li a.active::after {
   font-family: var(--font-heading);
 }
 
-/* ---------- 8. Testimonials (Home Page) ---------- */
+/* Testimonials */
 .testimonials {
   padding: 60px var(--side-pad) 90px;
   background-color: var(--white);
@@ -424,7 +401,7 @@ nav ul li a.active::after {
   color: var(--muted);
 }
 
-/* ---------- 9. About Page ---------- */
+/* About */
 .about-content {
   display: flex;
   align-items: center;
@@ -508,7 +485,7 @@ nav ul li a.active::after {
   letter-spacing: 1px;
 }
 
-/* ---------- 10. Gallery Page (Slider & Modal) ---------- */
+/* Gallery */
 .slider {
   position: relative;
   overflow: hidden;
@@ -522,7 +499,6 @@ nav ul li a.active::after {
 .slider-track {
   display: flex;
   transition: transform 0.5s ease;
-  will-change: transform;
 }
 
 .slider-track img {
@@ -626,7 +602,7 @@ nav ul li a.active::after {
   opacity: 1;
 }
 
-/* Modal Pop-up (Assignment Requirement: Dynamic Content / Modal Pop-up) */
+/* Lightbox modal */
 .modal {
   display: none;
   position: fixed;
@@ -695,7 +671,7 @@ nav ul li a.active::after {
   background-color: var(--primary-color);
 }
 
-/* ---------- 11. Contact Page ---------- */
+/* Contact */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -709,9 +685,6 @@ nav ul li a.active::after {
 .contact-info {
   flex: 1 1 320px;
   min-width: 0;
-}
-
-.contact-form {
   background-color: var(--white);
   padding: clamp(24px, 4vw, 36px);
   border-radius: var(--radius);
@@ -787,13 +760,6 @@ nav ul li a.active::after {
   display: block;
 }
 
-.contact-info {
-  background-color: var(--white);
-  padding: clamp(24px, 4vw, 36px);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
 .contact-info h3 {
   font-family: var(--font-heading);
   color: var(--primary-color);
@@ -853,7 +819,7 @@ nav ul li a.active::after {
   display: block;
 }
 
-/* ---------- 12. Footer ---------- */
+/* Footer */
 footer {
   background-color: var(--dark-text);
   color: var(--white);
@@ -929,7 +895,7 @@ footer {
   color: #b9b0a7;
 }
 
-/* ---------- 13. Responsive Media Queries ---------- */
+/* Responsive styles */
 @media (max-width: 1024px) {
   .highlights,
   .testimonial-grid {
@@ -977,10 +943,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .footer-brand,
   .footer-container > .footer-col:last-child {
     grid-column: 1 / -1;
@@ -1002,21 +964,11 @@ footer {
     --side-pad: 16px;
   }
 
-  .highlights {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .highlights,
+  .menu-grid,
+  .gallery-grid,
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
   }
 
   .contact-section {
