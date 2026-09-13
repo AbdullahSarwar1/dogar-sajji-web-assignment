@@ -1,18 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
-  // ---------- 1. Responsive Navigation / Hamburger Menu ----------
+  // Navigation
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector("nav ul");
   const navBackdrop = document.querySelector(".nav-backdrop");
 
   if (hamburger && navMenu) {
     function toggleMenu() {
-      const isOpen = navMenu.classList.contains("active");
-      navMenu.classList.toggle("active");
+      const isOpen = navMenu.classList.toggle("active");
       hamburger.classList.toggle("active");
       if (navBackdrop) navBackdrop.classList.toggle("active");
-      hamburger.setAttribute("aria-expanded", !isOpen);
+      hamburger.setAttribute("aria-expanded", isOpen);
     }
 
     function closeMenu() {
@@ -23,18 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     hamburger.addEventListener("click", toggleMenu);
+    if (navBackdrop) navBackdrop.addEventListener("click", closeMenu);
 
-    if (navBackdrop) {
-      navBackdrop.addEventListener("click", closeMenu);
-    }
-
-    // Close when clicking any nav link
-    const navLinks = navMenu.querySelectorAll("a");
-    navLinks.forEach(function (link) {
+    navMenu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", closeMenu);
     });
 
-    // Close on Escape key
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && navMenu.classList.contains("active")) {
         closeMenu();
@@ -42,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- 2. Image Slider (Gallery Page) ----------
+  // Image slider
   const slider = document.querySelector(".slider");
   const sliderTrack = document.querySelector(".slider-track");
 
@@ -54,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSlide = 0;
 
     function updateSlide() {
-      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      sliderTrack.style.transform = "translateX(-" + (currentSlide * 100) + "%)";
       if (counter) {
-        counter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        counter.textContent = (currentSlide + 1) + " / " + slides.length;
       }
     }
 
@@ -77,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlide();
   }
 
-  // ---------- 3. Modal Pop-up / Lightbox (Gallery Page) ----------
+  // Lightbox modal
   const galleryItems = document.querySelectorAll(".gallery-item");
   const modal = document.getElementById("imageModal");
 
@@ -126,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ---------- 4. Client-Side Form Validation (Contact Page) ----------
+  // Form validation
   const contactForm = document.getElementById("contactForm");
 
   if (contactForm) {
@@ -184,12 +177,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function validatePhone() {
       if (!phoneInput) return true;
       const val = phoneInput.value.trim();
-      const phoneRegex = /^(\+92|0)?3[0-9]{9}$/;
+      const cleanNumber = val.replace(/\D/g, "");
+      const phoneRegex = /^(\+?92|0)?3\d{9}$/;
       if (val === "") {
         return showError(phoneInput, "phoneError", "Phone number is required.");
       }
-      if (!phoneRegex.test(val.replace(/[\s-]/g, ""))) {
-        return showError(phoneInput, "phoneError", "Enter a valid phone number (e.g. 0300-1234567).");
+      if (!phoneRegex.test(cleanNumber)) {
+        return showError(phoneInput, "phoneError", "Enter a valid phone number (e.g. 0300 1234567).");
       }
       return clearError(phoneInput, "phoneError");
     }
@@ -205,13 +199,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return clearError(messageInput, "messageError");
     }
 
-    // Real-time input listeners
     nameInput.addEventListener("input", validateName);
     emailInput.addEventListener("input", validateEmail);
     if (phoneInput) phoneInput.addEventListener("input", validatePhone);
     messageInput.addEventListener("input", validateMessage);
 
-    // Submit handler
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -222,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isNameValid && isEmailValid && isPhoneValid && isMessageValid) {
         if (formSuccess) {
-          formSuccess.textContent = `Thank you, ${nameInput.value.trim()}! Your message has been sent successfully.`;
+          formSuccess.textContent = "Thank you, " + nameInput.value.trim() + "! Your message has been sent successfully.";
           formSuccess.classList.add("visible");
         }
         contactForm.reset();
