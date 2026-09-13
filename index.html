@@ -1,11 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dogar Sajji - Authentic Balochi Sajji and charcoal grilled specialties in Karachi. Traditional slow-roasted recipes since 1998." />
+    <meta name="author" content="Abdullah Sarwar" />
+    <title>Dogar Sajji | Authentic Charcoal Grilled Balochi Sajji</title>
     
-</body>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Site Header & Sticky Navigation -->
+    <header class="site-header">
+      <a href="index.html" class="logo" aria-label="Dogar Sajji Home">Dogar <span>Sajji</span></a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-sm">Book Table</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Semantic Aside: Announcement Banner -->
+    <aside class="announcement-banner" aria-label="Chef's Special Announcement">
+      <div class="announcement-content">
+        <div class="announcement-text">
+          <span class="announcement-badge">Fresh From The Grill</span>
+          <span>Authentic Balochi Whole Chicken & Mutton Sajji roasted fresh over natural wood embers daily!</span>
+        </div>
+        <a href="menu.html" class="announcement-link">Explore Specials &rarr;</a>
+      </div>
+    </aside>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero hero-home" aria-label="Hero Banner">
+        <div class="hero-content">
+          <span class="hero-badge">Est. 1998 &bull; Authentic Balochi Tradition</span>
+          <h1>Real Sajji, Every Bite a Living Tradition</h1>
+          <p>
+            Slow-grilled over open wood charcoal for over two hours, the way our family has perfected it through three generations.
+          </p>
+          <div class="hero-btns">
+            <a href="menu.html" class="btn">View Our Menu</a>
+            <a href="contact.html" class="btn btn-secondary">Reserve a Table</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlights Section (Semantic Articles) -->
+      <section class="highlights-section" aria-label="Our Core Highlights">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Why Choose Us</span>
+            <h2>The Art of Traditional Roasting</h2>
+            <p>We honor authentic culinary heritage without shortcuts or artificial seasonings.</p>
+          </div>
+
+          <div class="highlights-grid">
+            <article class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true">&#127831;</div>
+              <h3>Fresh Daily</h3>
+              <p>100% farm-fresh, premium poultry and tender mutton butchered and marinated each morning.</p>
+            </article>
+
+            <article class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true">&#128220;</div>
+              <h3>Balochi Recipe</h3>
+              <p>Seasoned with pure rock salt, special citrus-papaya rub, and mountain spices perfected over decades.</p>
+            </article>
+
+            <article class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true">&#127942;</div>
+              <h3>28 Years Legacy</h3>
+              <p>Founded in 1998, continuing our grandfather's passion for hospitality and culinary perfection.</p>
+            </article>
+
+            <article class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true">&#128293;</div>
+              <h3>Wood Charcoal</h3>
+              <p>Cooked slow and steady on skewers around glowing wood embers for unparalleled smoky flavor.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Dishes Section -->
+      <section class="featured-menu" aria-label="Signature Dishes">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Chef's Recommendations</span>
+            <h2>Signature Charcoal Dishes</h2>
+            <p>Hand-crafted dishes prepared with patience, fresh ingredients, and authentic flair.</p>
+          </div>
+
+          <div class="menu-grid">
+            <!-- Item 1 -->
+            <div class="menu-item" data-category="sajji">
+              <div class="menu-item-img-wrapper">
+                <img src="images/full-sajji.jpg" alt="Whole chicken Sajji served with basmati rice" loading="lazy" />
+                <span class="item-badge">Bestseller</span>
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Sajji Special</span>
+                <h3>Full Chicken Sajji</h3>
+                <p>Whole skinless chicken slow roasted on skewers, served with seasoned basmati rice and chutney.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 1,800</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-item" data-category="sajji">
+              <div class="menu-item-img-wrapper">
+                <img src="images/half-sajji.jpeg" alt="Half chicken Sajji with traditional spices" loading="lazy" />
+                <span class="item-badge secondary">Popular</span>
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Sajji Special</span>
+                <h3>Half Chicken Sajji</h3>
+                <p>Perfect solo feast with succulent charcoal-roasted half chicken, fragrant rice, and yogurt dip.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 1,000</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-item" data-category="sajji">
+              <div class="menu-item-img-wrapper">
+                <img src="images/sajji-platter.jpg" alt="Grand Sajji family platter with naans and dips" loading="lazy" />
+                <span class="item-badge">Feast</span>
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Family Combo</span>
+                <h3>Grand Family Platter</h3>
+                <p>Two whole Sajjis, dual rice platters, 4 fresh tandoori naans, salad, and signature chutneys.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 3,200</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-item" data-category="sajji">
+              <div class="menu-item-img-wrapper">
+                <img src="images/mutton-sajji.jpg" alt="Slow roasted mutton leg sajji" loading="lazy" />
+                <span class="item-badge">Specialty</span>
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Balochi Premium</span>
+                <h3>Balochi Mutton Sajji</h3>
+                <p>Whole lamb/mutton leg roasted over wood embers until fall-apart tender with aromatic crust.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 3,500</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="menu-item" data-category="bbq">
+              <div class="menu-item-img-wrapper">
+                <img src="images/chicken-tikka.jpg" alt="Spicy grilled chicken tikka" loading="lazy" />
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Charcoal BBQ</span>
+                <h3>Chicken Tikka Quarter</h3>
+                <p>Juicy chicken breast or leg marinated in fresh yogurt and spices, charred to perfection.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 600</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="menu-item" data-category="bbq">
+              <div class="menu-item-img-wrapper">
+                <img src="images/seekh-kebab.jpg" alt="Grilled minced meat seekh kebabs" loading="lazy" />
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Charcoal BBQ</span>
+                <h3>Beef Seekh Kebab</h3>
+                <p>Spiced ground beef skewered and char-broiled, infused with fresh coriander and ginger.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 700</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="menu-item" data-category="bbq">
+              <div class="menu-item-img-wrapper">
+                <img src="images/chicken-karahi.jpg" alt="Sizzling chicken karahi wok" loading="lazy" />
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Karahi Special</span>
+                <h3>Chicken Shinwari Karahi</h3>
+                <p>Tender chicken simmered in pure tomatoes, green chilies, and black pepper with zero dry spices.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 1,500</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="menu-item" data-category="sides">
+              <div class="menu-item-img-wrapper">
+                <img src="images/sajji-rice.jpg" alt="Special fragrant basmati sajji rice" loading="lazy" />
+              </div>
+              <div class="menu-item-body">
+                <span class="menu-item-category">Sides & Rice</span>
+                <h3>Fragrant Sajji Rice</h3>
+                <p>Long-grain basmati pilaf steamed with dried raisins, roasted almonds, and light saffron.</p>
+                <div class="menu-item-footer">
+                  <span class="price">Rs. 300</span>
+                  <button type="button" class="order-btn">Quick Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 45px;">
+            <a href="menu.html" class="btn">View Complete Menu & Prices</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials Section -->
+      <section class="testimonials" aria-label="Customer Reviews">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Social Proof</span>
+            <h2>What Our Diners Say</h2>
+            <p>Over 10,000 delighted families and food enthusiasts have shared meals with us.</p>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <div class="star-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="quote">
+                "The crisp skin with that juicy meat and subtle rock-salt flavor is unbeatable. Dogar Sajji has remained our family's favorite weekend dining spot for 12 years."
+              </p>
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">AR</div>
+                <div class="reviewer-info">
+                  <h3>Ahmed Raza</h3>
+                  <span class="role">Verified Regular Diner</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="star-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="quote">
+                "As a food blogger in Karachi, finding authentic non-greasy Balochi Sajji is rare. Their charcoal technique keeps the chicken remarkably juicy inside."
+              </p>
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">SM</div>
+                <div class="reviewer-info">
+                  <h3>Sana Malik</h3>
+                  <span class="role">Culinary Food Writer</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="star-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="quote">
+                "The Grand Family Platter is an absolute steal! The saffron rice with raisins paired with the mint chutney and hot garlic naan was a total feast."
+              </p>
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">BK</div>
+                <div class="reviewer-info">
+                  <h3>Bilal Khan</h3>
+                  <span class="role">Google Local Guide (Level 7)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="star-rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="quote">
+                "Hired them to cater our brother's Valima reception with live charcoal stations. Guests are still asking me for Dogar Sajji's contact number!"
+              </p>
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">HS</div>
+                <div class="reviewer-info">
+                  <h3>Hina Sheikh</h3>
+                  <span class="role">Event Host & Coordinator</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section class="cta-banner" aria-label="Reservations Call to Action">
+        <div class="container">
+          <div class="cta-box">
+            <h2>Ready to Experience Authentic Sajji?</h2>
+            <p>
+              Reserve a private family table or pre-order freshly grilled whole sajji for your gathering.
+            </p>
+            <a href="contact.html" class="btn btn-secondary">Book a Table Online</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Standard Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Brand Column -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo">Dogar <span>Sajji</span></a>
+          <p>
+            Traditional Balochi culinary excellence slow-roasted over real charcoal wood embers. Preserving timeless family recipes since 1998.
+          </p>
+          <div class="socials" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit Facebook">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit Instagram">Instagram</a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="Visit TikTok">TikTok</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="contact.html">Contact & Booking</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">&#128205;</span>
+              <span>Main Boulevard, Gulberg / Clifton, Karachi, Pakistan</span>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">&#128222;</span>
+              <a href="tel:03001234567">0300-1234567</a>
+            </li>
+            <li class="footer-contact-item">
+              <span class="footer-contact-icon">&#9993;</span>
+              <a href="mailto:info@dogarsajji.com">info@dogarsajji.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Timings -->
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li><strong>Mon - Thu:</strong> 12:00 PM &ndash; 11:30 PM</li>
+            <li><strong>Fri - Sun:</strong> 12:00 PM &ndash; 01:00 AM</li>
+            <li><em>Takeaway & Dine-In Available Daily</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 Dogar Sajji. All Rights Reserved.</p>
+          <p class="student-credit">Assignment 01 &bull; Web Technologies &bull; BS CS F24 (Dr. Noman Shafi)</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button class="back-to-top" aria-label="Scroll back to top of page">&#8593;</button>
+
+    <!-- Core Interactive JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
